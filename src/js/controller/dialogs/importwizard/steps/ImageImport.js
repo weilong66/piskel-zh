@@ -166,7 +166,7 @@
     } else if (this.sheetImportType.checked) {
       return this.sheetImportType.value;
     } else {
-      throw 'Could not find the currently selected import type';
+      throw '无法找到当前选择的导入类型';//Could not find the currently selected import type
     }
   };
 

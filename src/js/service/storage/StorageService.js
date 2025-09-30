@@ -46,7 +46,7 @@
 
   ns.StorageService.prototype.delegateSave_ = function(delegatedService, piskel, saveAsNew) {
     if (this.savingFlag_) {
-      return Q.reject('Already saving');
+      return Q.reject('已保存');
     }
 
     $.publish(Events.BEFORE_SAVING_PISKEL);
@@ -86,7 +86,7 @@
 
   ns.StorageService.prototype.onSaveSuccess_ = function () {
     $.publish(Events.SHOW_NOTIFICATION, [{
-      content : 'Successfully saved !',
+      content : '保存成功！',
       hideDelay : 3000
     }]);
     $.publish(Events.PISKEL_SAVED);
@@ -94,7 +94,7 @@
   };
 
   ns.StorageService.prototype.onSaveError_ = function (errorMessage) {
-    var errorText = 'Saving failed';
+    var errorText = '保存失败';
     if (errorMessage) {
       errorText += ' : ' + errorMessage;
     }

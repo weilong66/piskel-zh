@@ -3,11 +3,11 @@
 
   ns.Rotate = function () {
     this.toolId = 'tool-rotate';
-    this.helpText = 'Counter-clockwise rotation';
+    this.helpText = '逆时针旋转'; //逆时针旋转
     this.tooltipDescriptors = [
-      {key : 'alt', description : 'Clockwise rotation'},
-      {key : 'ctrl', description : 'Apply to all layers'},
-      {key : 'shift', description : 'Apply to all frames'}];
+      {key : 'alt', description : '顺时针旋转'}, //Clockwise rotation
+      {key : 'ctrl', description : '应用于所有图层'}, //Apply to all layers
+      {key : 'shift', description : '应用于所有帧'}]; //Apply to all frames
   };
 
   pskl.utils.inherit(ns.Rotate, ns.AbstractTransformTool);

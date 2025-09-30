@@ -62,8 +62,8 @@
         id: session.id,
         name: session.name,
         description: session.description ? '- ' + session.description : '',
-        date: pskl.utils.DateUtils.format(session.endDate, 'the {{Y}}/{{M}}/{{D}} at {{H}}:{{m}}'),
-        count: session.count === 1 ? '1 snapshot' : session.count + ' snapshots'
+        date: pskl.utils.DateUtils.format(session.endDate, ' {{Y}}/{{M}}/{{D}} {{H}}:{{m}}'),
+        count: session.count === 1 ? '1 个快照' : session.count + ' 个快照'
       };
       return previous + pskl.utils.Template.replace(sessionItemTemplate, view);
     }, '');
@@ -84,7 +84,7 @@
       this.backupsController.backupsData.selectedSession = sessionId;
       this.backupsController.next();
     } else if (action == 'delete') {
-      if (window.confirm('Are you sure you want to delete this session?')) {
+      if (window.confirm('你确定要删除此会话备份吗?')) {
         evt.target.closest('.session-item').classList.add('deleting');
         Q.all([
           pskl.app.backupService.deleteSession(sessionId),

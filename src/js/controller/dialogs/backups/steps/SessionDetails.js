@@ -54,7 +54,7 @@
         id: snapshot.id,
         name: snapshot.name,
         description: snapshot.description ? '- ' + snapshot.description : '',
-        date: pskl.utils.DateUtils.format(snapshot.date, 'the {{Y}}/{{M}}/{{D}} at {{H}}:{{m}}'),
+        date: pskl.utils.DateUtils.format(snapshot.date, '{{Y}}/{{M}}/{{D}} {{H}}:{{m}}'),
         frames: snapshot.frames === 1 ? '1 frame' : snapshot.frames + ' frames',
         resolution: pskl.utils.StringUtils.formatSize(snapshot.width, snapshot.height),
         fps: snapshot.fps

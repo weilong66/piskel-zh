@@ -11,7 +11,7 @@
     this.superclass.constructor.call(this);
 
     this.toolId = 'tool-eraser';
-    this.helpText = 'Eraser tool';
+    this.helpText = '橡皮擦工具'; //Eraser tool
     this.shortcut = pskl.service.keyboard.Shortcuts.TOOL.ERASER;
   };
 

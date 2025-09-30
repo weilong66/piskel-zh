@@ -3,11 +3,11 @@
 
   ns.Flip = function () {
     this.toolId = 'tool-flip';
-    this.helpText = 'Flip horizontally';
+    this.helpText = '水平翻转'; //Flip horizontally
     this.tooltipDescriptors = [
-      {key : 'alt', description : 'Flip vertically'},
-      {key : 'ctrl', description : 'Apply to all layers'},
-      {key : 'shift', description : 'Apply to all frames'}
+      {key : 'alt', description : '垂直翻转'},//Flip vertically
+      {key : 'ctrl', description : '应用于所有图层'}, //Apply to all layers
+      {key : 'shift', description : '应用于所有帧'} //Apply to all frames
     ];
   };
 

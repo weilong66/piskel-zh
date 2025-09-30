@@ -1,14 +1,14 @@
 <script type="text/template" id="templates/settings/save.html">
   <div class="settings-section settings-section-save">
     <form action="" method="POST" class="save-form" name="save-form">
-      <div class="settings-title">Sprite Information</div>
+      <div class="settings-title">精灵图信息</div>
       <div class="settings-item">
         <div class="settings-form-section" style="overflow:hidden">
-          <label class="row" style="line-height:20px;">Title : </label>
+          <label class="row" style="line-height:20px;">标题 : </label>
           <input id="save-name" type="text" class="save-field textfield" autocomplete="off" />
         </div>
         <div class="settings-form-section">
-          <label class="row" style="line-height:20px;">Description : </label>
+          <label class="row" style="line-height:20px;">描述 : </label>
           <textarea id="save-description" class="save-field textfield"></textarea>
         </div>
         <div class="settings-form-section  save-public-section">
@@ -23,28 +23,28 @@
 
 <!-- save-localstorage-partial -->
 <script type="text/template" id="save-localstorage-partial">
-  <div class="settings-title">Save offline in Browser</div>
+  <div class="settings-title">在浏览器中离线保存</div>
   <div class="settings-item">
-    <input type="button" class="button button-primary" id="save-localstorage-button" value="Save in Browser" />
-    <div class="save-status">Your piskel will be saved locally and will only be accessible from this browser.</div>
+    <input type="button" class="button button-primary" id="save-localstorage-button" value="保存到浏览器" />
+    <div class="save-status">您的Piskel作品将保存在本地，并且只能从该浏览器访问。</div>
   </div>
 </script>
 
 <!-- save-desktop-partial -->
 <script type="text/template" id="save-desktop-partial">
-  <div class="settings-title">Save as File</div>
+  <div class="settings-title">保存到文件</div>
   <div class="settings-item">
     <input type="button" class="button button-primary" id="save-desktop-button" value="Save" />
-    <input type="button" class="button button-primary" id="save-desktop-as-new-button" value="Save as ..." />
-    <div class="save-status">Your sprite will be saved as a .piskel file.</div>
+    <input type="button" class="button button-primary" id="save-desktop-as-new-button" value="保存到 ..." />
+    <div class="save-status">你的精灵图将保存到 .piskel 文件.</div>
   </div>
 </script>
 
 <!-- save-file-download-partial -->
 <script type="text/template" id="save-file-download-partial">
-  <div class="settings-title">Save offline as File</div>
+  <div class="settings-title">保存为离线文件</div>
   <div class="settings-item">
-    <input type="button" class="button button-primary" id="save-file-download-button" value="Save as .piskel" />
-    <div class="save-status">Your sprite will be downloaded as a .piskel file.</div>
+    <input type="button" class="button button-primary" id="save-file-download-button" value="保存到 .piskel" />
+    <div class="save-status">您的精灵图将下载为 .piskel 文件。</div>
   </div>
 </script>

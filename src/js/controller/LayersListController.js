@@ -50,28 +50,28 @@
   };
 
   ns.LayersListController.prototype.createButtonTooltips_ = function () {
-    var addTooltip = pskl.utils.TooltipFormatter.format('Create a layer', null, [
-      { key: 'shift', description: 'Clone current layer' }
+    var addTooltip = pskl.utils.TooltipFormatter.format('创建图层', null, [
+      { key: 'shift', description: '克隆当前图层' }
     ]);
     var addButton = this.rootEl.querySelector('[data-action="add"]');
     addButton.setAttribute('title', addTooltip);
 
-    var moveDownTooltip = pskl.utils.TooltipFormatter.format('Move layer down', null, [
-      { key: 'shift', description: 'Move to the bottom' }
+    var moveDownTooltip = pskl.utils.TooltipFormatter.format('向下移动图层', null, [
+      { key: 'shift', description: '移动到底部' }
     ]);
     var moveDownButton = this.rootEl.querySelector('[data-action="down"]');
     moveDownButton.setAttribute('title', moveDownTooltip);
 
-    var moveUpTooltip = pskl.utils.TooltipFormatter.format('Move layer up', null, [
-      { key: 'shift', description: 'Move to the top' }
+    var moveUpTooltip = pskl.utils.TooltipFormatter.format('向上移动图层', null, [
+      { key: 'shift', description: '移动到顶部' }
     ]);
     var moveUpButton = this.rootEl.querySelector('[data-action="up"]');
     moveUpButton.setAttribute('title', moveUpTooltip);
   };
 
   ns.LayersListController.prototype.initToggleLayerPreview_ = function () {
-    var descriptors = [{ description: 'Opacity defined in PREFERENCES' }];
-    var helpText = 'Preview all layers';
+    var descriptors = [{ description: '不透明度在“偏好设置”中定义' }];
+    var helpText = '预览所有图层';
 
     pskl.app.shortcutService.registerShortcut(this.layerPreviewShortcut, this.toggleLayerPreview_.bind(this));
     var tooltip = pskl.utils.TooltipFormatter.format(helpText, this.layerPreviewShortcut, descriptors);
@@ -177,7 +177,7 @@
     } else if (el.classList.contains('layer-item-opacity')) {
       index = pskl.utils.Dom.getData(el, 'layerIndex');
       var layer = this.piskelController.getLayerAt(parseInt(index, 10));
-      var opacity = window.prompt('Set layer opacity (value between 0 and 1)', layer.getOpacity());
+      var opacity = window.prompt('设置图层不透明度（值介于 0 和 1 之间）', layer.getOpacity());
       this.piskelController.setLayerOpacityAt(index, opacity);
     } else {
       var containingButton = el.closest('.button');

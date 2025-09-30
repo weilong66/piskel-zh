@@ -1,7 +1,7 @@
 <script type="text/template" id="templates/dialogs/import.html">
   <div class="dialog-wrapper">
     <h3 class="dialog-head">
-      Import and Merge
+      导入和合并
       <span class="dialog-close">X</span>
     </h3>
     <div class="dialog-content import-wizard-container"></div>
@@ -12,7 +12,7 @@
 <div class="import-step-container import-image-container">
   <form action="" method="POST" name="import-image-form">
     <div class="import-section">
-      <span class="dialog-section-title">Name :</span><span class="import-image-file-name"></span>
+      <span class="dialog-section-title">名称 :</span><span class="import-image-file-name"></span>
     </div>
     <div class="import-section">
       <div class="import-section-preview"></div>
@@ -20,38 +20,38 @@
     <div class="import-section">
       <label class="dialog-section-radio-label">
         <input class="dialog-section-radio" name="import-type" value="single" type="radio" checked="checked">
-        Import as single image
+        导入为单张图像
       </label>
     </div>
     <div class="import-section import-subsection">
-      <span class="dialog-section-title">Resize to</span>
+      <span class="dialog-section-title">调成为</span>
       <input type="text" class="textfield import-size-field" autocomplete="off" name="resize-width"/>x
       <input type="text" class="textfield import-size-field" autocomplete="off" name="resize-height"/>
     </div>
     <div class="import-section import-subsection">
-      <span class="import-section-title">Smooth resize</span>
+      <span class="import-section-title">平滑调整</span>
       <input type="checkbox" class="checkbox-fix" checked="checked" name="smooth-resize-checkbox" value="1"/>
     </div>
     <div class="import-section">
       <label class="dialog-section-radio-label">
         <input class="dialog-section-radio" name="import-type" value="sheet" type="radio">
-        Import as spritesheet
+        导入为精灵图
       </label>
     </div>
     <div class="import-section import-subsection">
-      <span class="dialog-section-title">Frame size</span>
+      <span class="dialog-section-title">帧尺寸</span>
       <input type="text" class="textfield import-size-field" autocomplete="off" name="frame-size-x"/>x
       <input type="text" class="textfield import-size-field" autocomplete="off" name="frame-size-y"/>
     </div>
     <div class="import-section import-subsection">
-      <span class="dialog-section-title">Offset</span>
+      <span class="dialog-section-title">偏移</span>
       <input type="text" class="textfield import-size-field" autocomplete="off" name="frame-offset-x"/>x
       <input type="text" class="textfield import-size-field" autocomplete="off" name="frame-offset-y"/>
     </div>
   </form>
   <div class="import-step-buttons">
-    <button class="import-back-button button">back</button>
-    <button class="import-next-button button button-primary">next</button>
+    <button class="import-back-button button">返回</button>
+    <button class="import-next-button button button-primary">继续</button>
   </div>
 </div>
 </script>
@@ -65,20 +65,20 @@
 
   <div class="import-step-content">
     <div class="import-mode">
-      <div class="import-mode-title">How do you want to import the new content?</div>
+      <div class="import-mode-title">您希望如何导入新内容？</div>
       <div class="import-mode-section">
-        <span class="import-mode-section-description">Combine with your sprite</span>
-        <button class="import-mode-merge-button button-primary button">Combine</button>
+        <span class="import-mode-section-description">与当前精灵图合并</span>
+        <button class="import-mode-merge-button button-primary button">合并</button>
       </div>
       <div class="import-mode-section">
-        <span class="import-mode-section-description">Replace your sprite</span>
-        <button class="import-mode-replace-button button-primary button">Replace</button>
+        <span class="import-mode-section-description">替换当前精灵图</span>
+        <button class="import-mode-replace-button button-primary button">替换</button>
       </div>
     </div>
 
     <div class="import-step-buttons">
-      <button class="import-back-button button">back</button>
-      <button style="display: none" class="import-next-button button button-primary">next</button>
+      <button class="import-back-button button">返回</button>
+      <button style="display: none" class="import-next-button button button-primary">继续</button>
     </div>
   </div>
 </div>
@@ -86,19 +86,19 @@
 
 <script type="text/template" id="import-meta-content">
   <div class="import-name">
-    <span class="import-meta-label">Name</span>
+    <span class="import-meta-label">名称</span>
     <span class="import-meta-value" title="{{name}}">{{name}}</span>
   </div>
   <div class="import-dimensions">
-    <span class="import-meta-label">Dimensions</span>
+    <span class="import-meta-label">尺寸</span>
     <span class="import-meta-value">{{dimensions}}</span>
   </div>
   <div class="import-frames">
-    <span class="import-meta-label">Frames</span>
+    <span class="import-meta-label">帧数</span>
     <span class="import-meta-value">{{frames}}</span>
   </div>
   <div class="import-layers">
-    <span class="import-meta-label">Layers</span>
+    <span class="import-meta-label">图层</span>
     <span class="import-meta-value">{{layers}}</span>
   </div>
 </script>
@@ -118,8 +118,8 @@
       <div class="import-resize-anchor-container"></div>
     </div>
     <div class="import-step-buttons">
-      <button class="import-back-button button">back</button>
-      <button class="import-next-button button button-primary">next</button>
+      <button class="import-back-button button">返回</button>
+      <button class="import-next-button button button-primary">继续</button>
     </div>
   </div>
 </div>
@@ -128,16 +128,16 @@
 <script type="text/template" id="import-resize-bigger-partial">
 <div class="import-resize-bigger">
   <div class="import-resize-section">
-    The imported image is bigger than the current sprite.
+    导入的图像尺寸比当前精灵图大
   </div>
   <div class="import-resize-section">
     <label class="import-resize-option">
       <input type="radio" name="resize-mode" id="resize-option-expand" value="expand" {{expandChecked}}/>
-      <span>Expand canvas to {{newSize}}</span>
+      <span>将画布尺寸扩展到 {{newSize}}</span>
     </label>
     <label class="import-resize-option">
       <input type="radio" name="resize-mode" id="resize-option-keep" value="keep" {{keepChecked}}/>
-      <span>Keep canvas size at {{size}}</span>
+      <span>保持画布尺寸为 {{size}}</span>
     </label>
   </div>
 </div>
@@ -146,7 +146,7 @@
 <script type="text/template" id="import-resize-smaller-partial">
 <div class="import-resize-smaller">
   <div class="import-resize-section">
-    The image being imported is smaller ({{newSize}}) than the canvas size ({{size}}).
+    正在导入的图片大小为 ({{newSize}}) 比画布尺寸 ({{size}}) 小。
   </div>
 </div>
 </script>
@@ -159,24 +159,24 @@
   </div>
 
   <div class="import-step-content">
-    <div>Select the insertion frame:</div>
+    <div>选择插入帧:</div>
     <div class="insert-frame-preview"></div>
     <div class="insert-mode-container">
       <div class="insert-mode-option-label">
-        Insert imported frames:
+        将导入的帧:
       </div>
       <label class="insert-mode-option">
         <input type="radio" name="insert-mode" id="insert-mode-add" value="add" checked="checked"/>
-        <span>as new frames</span>
+        <span>作为新帧插入</span>
       </label>
       <label class="insert-mode-option">
         <input type="radio" name="insert-mode" id="insert-mode-insert" value="insert"/>
-        <span>in existing frames</span>
+        <span>插入到现有帧中</span>
       </label>
     </div>
     <div class="import-step-buttons">
-      <button class="import-back-button button">back</button>
-      <button class="import-next-button button button-primary">import</button>
+      <button class="import-back-button button">返回</button>
+      <button class="import-next-button button button-primary">导入</button>
     </div>
   </div>
 </div>

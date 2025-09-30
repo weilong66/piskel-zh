@@ -8,10 +8,10 @@
 
   ns.Stroke = function() {
     this.toolId = 'tool-stroke';
-    this.helpText = 'Stroke tool';
+    this.helpText = '画线工具'; //Stroke tool
     this.shortcut = pskl.service.keyboard.Shortcuts.TOOL.STROKE;
     this.tooltipDescriptors = [
-      {key : 'shift', description : 'Hold shift to draw straight lines'}
+      {key : 'shift', description : '按住Shift键花直线'} //Hold shift to draw straight lines
     ];
 
     // Stroke's first point coordinates (set in applyToolAt)

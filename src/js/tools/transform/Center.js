@@ -3,10 +3,10 @@
 
   ns.Center = function () {
     this.toolId = 'tool-center';
-    this.helpText = 'Align image to the center';
+    this.helpText = '将图像居中对齐'; //Align image to the center
     this.tooltipDescriptors = [
-      {key : 'ctrl', description : 'Apply to all layers'},
-      {key : 'shift', description : 'Apply to all frames'}
+      {key : 'ctrl', description : '应用于所有图层'}, //Apply to all layers
+      {key : 'shift', description : '应用于所有帧'} //Apply to all frames
     ];
   };
 

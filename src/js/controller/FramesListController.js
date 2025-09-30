@@ -191,7 +191,7 @@
     newFrameButton.className = 'add-frame-action';
     newFrameButton.setAttribute('data-tile-action', ACTION.NEW_FRAME);
     newFrameButton.innerHTML = '<div class="add-frame-action-icon icon-frame-plus-white">' +
-      '</div><div class="label">Add new frame</div>';
+      '</div><div class="label">添加新帧</div>';
     this.previewList.appendChild(newFrameButton);
     this.addFrameTile = newFrameButton;
 
@@ -281,7 +281,7 @@
     cloneFrameButton.setAttribute('data-placement', 'right');
     cloneFrameButton.setAttribute('data-tile-number', tileNumber);
     cloneFrameButton.setAttribute('data-tile-action', ACTION.CLONE);
-    cloneFrameButton.setAttribute('title', 'Duplicate this frame');
+    cloneFrameButton.setAttribute('title', '克隆当前帧');
     cloneFrameButton.className = 'tile-overlay duplicate-frame-action icon-frame-duplicate-white';
     previewTileRoot.appendChild(cloneFrameButton);
 
@@ -289,7 +289,7 @@
     var deleteButton = document.createElement('button');
     deleteButton.setAttribute('rel', 'tooltip');
     deleteButton.setAttribute('data-placement', 'right');
-    deleteButton.setAttribute('title', 'Delete this frame');
+    deleteButton.setAttribute('title', '删除当前帧');
     deleteButton.setAttribute('data-tile-number', tileNumber);
     deleteButton.setAttribute('data-tile-action', ACTION.DELETE);
     deleteButton.className = 'tile-overlay delete-frame-action icon-frame-recyclebin-white';
@@ -303,7 +303,7 @@
     // Add tile count
     var tileCount = document.createElement('button');
     tileCount.setAttribute('rel', 'tooltip');
-    tileCount.setAttribute('title', 'Toggle for preview');
+    tileCount.setAttribute('title', '切换预览');
     tileCount.setAttribute('data-tile-number', tileNumber);
     tileCount.setAttribute('data-tile-action', ACTION.TOGGLE);
     tileCount.className = 'tile-overlay tile-count toggle-frame-action';

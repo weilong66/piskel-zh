@@ -8,7 +8,7 @@
 
   ns.PaintBucket = function() {
     this.toolId = 'tool-paint-bucket';
-    this.helpText = 'Paint bucket tool';
+    this.helpText = '油漆桶工具'; //Paint bucket tool
     this.shortcut = pskl.service.keyboard.Shortcuts.TOOL.PAINT_BUCKET;
   };
 

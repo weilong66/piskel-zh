@@ -61,7 +61,7 @@ var Constants = {
   APPENGINE_SAVE_LIMIT : 1 * 1024 * 1024,
 
   // Message displayed when an action will lead to erase the current animation.
-  CONFIRM_OVERWRITE: 'This will replace your current animation, are you sure you want to continue?',
+  CONFIRM_OVERWRITE: '这将替换您当前的作品，您确定要继续吗？',
 
   // SERVICE URLS
   APPENGINE_SAVE_URL : 'save'

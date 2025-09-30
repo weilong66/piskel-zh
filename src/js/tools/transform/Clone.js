@@ -3,7 +3,7 @@
 
   ns.Clone = function () {
     this.toolId = 'tool-clone';
-    this.helpText = 'Clone current layer to all frames';
+    this.helpText = '将当前图像克隆到所有帧'; //Clone current layer to all frames
     this.tooltipDescriptors = [];
   };
 

@@ -10,7 +10,7 @@
     ns.AbstractDragSelect.call(this);
 
     this.toolId = 'tool-rectangle-select';
-    this.helpText = 'Rectangle selection';
+    this.helpText = '矩形选框工具'; //Rectangle selection
     this.shortcut = pskl.service.keyboard.Shortcuts.TOOL.RECTANGLE_SELECT;
 
   };

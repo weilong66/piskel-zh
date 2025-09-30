@@ -20,10 +20,10 @@
     this.hasSelection = false;
 
     this.tooltipDescriptors = [
-      {description : 'Drag the selection to move it. You may switch to other layers and frames.'},
-      {key : 'ctrl+c', description : 'Copy the selected area'},
-      {key : 'ctrl+v', description : 'Paste the copied area'},
-      {key : 'shift', description : 'Hold to move the content'}
+      {description : '拖拽选区以移动它。你可以切换到其他图层和帧。'},
+      {key : 'ctrl+c', description : '复制所选区域'},
+      {key : 'ctrl+v', description : '粘贴已复制的区域'},
+      {key : 'shift', description : '按住以移动选区内容'}
     ];
 
     $.subscribe(Events.SELECTION_DISMISSED, this.onSelectionDismissed_.bind(this));

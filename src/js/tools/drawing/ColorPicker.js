@@ -8,7 +8,7 @@
 
   ns.ColorPicker = function() {
     this.toolId = 'tool-colorpicker';
-    this.helpText = 'Color picker';
+    this.helpText = '颜色拾取器';//Color picker
     this.shortcut = pskl.service.keyboard.Shortcuts.TOOL.COLORPICKER;
   };
 

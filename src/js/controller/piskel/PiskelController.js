@@ -237,7 +237,7 @@
     if (this.hasFrameAt(index)) {
       this.currentFrameIndex = index;
     } else {
-      window.console.error('Could not set current frame index to ' + index);
+      window.console.error('无法将当前帧索引设置为 ' + index);//Could not set current frame index to
     }
   };
 
@@ -259,7 +259,7 @@
     if (this.hasLayerAt(index)) {
       this.currentLayerIndex = index;
     } else {
-      window.console.error('Could not set current layer index to ' + index);
+      window.console.error('无法将当前图层索引设置为 ' + index);//Could not set current layer index to
     }
   };
 

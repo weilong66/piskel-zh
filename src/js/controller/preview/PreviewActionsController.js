@@ -18,17 +18,17 @@
       original: {
         button: document.querySelector('.original-size-button'),
         shortcut: pskl.service.keyboard.Shortcuts.MISC.X1_PREVIEW,
-        tooltip: 'Original size preview'
+        tooltip: '原始尺寸预览'
       },
       best: {
         button: document.querySelector('.best-size-button'),
         shortcut: pskl.service.keyboard.Shortcuts.MISC.BEST_PREVIEW,
-        tooltip: 'Best size preview'
+        tooltip: '最佳尺寸预览'
       },
       full: {
         button: document.querySelector('.full-size-button'),
         shortcut: pskl.service.keyboard.Shortcuts.MISC.FULL_PREVIEW,
-        tooltip: 'Full size preview'
+        tooltip: '全尺寸预览'
       }
     };
     this.toggleOnionSkinButton = document.querySelector('.preview-toggle-onion-skin');
@@ -47,7 +47,7 @@
     registerShortcut(this.onionSkinShortcut, this.toggleOnionSkin_.bind(this));
     registerShortcut(this.toggleGridShortcut, this.toggleGrid_.bind(this));
 
-    var onionSkinTooltip = pskl.utils.TooltipFormatter.format('Toggle onion skin', this.onionSkinShortcut);
+    var onionSkinTooltip = pskl.utils.TooltipFormatter.format('切换洋葱皮模式', this.onionSkinShortcut);
     this.toggleOnionSkinButton.setAttribute('title', onionSkinTooltip);
 
     for (var size in this.previewSizes) {
@@ -92,13 +92,13 @@
 
     var validSizes;
     if (fullZoom < 1) {
-      this.disablePreviewSizeWidget_('No other option available');
+      this.disablePreviewSizeWidget_('没有其他可用选项');//No other option available
       validSizes = ['full'];
     } else if (fullZoom === 1) {
-      this.disablePreviewSizeWidget_('No other option available');
+      this.disablePreviewSizeWidget_('没有其他可用选项');//No other option available
       validSizes = ['original'];
     } else if (seamlessModeEnabled) {
-      this.disablePreviewSizeWidget_('Disabled in tile mode');
+      this.disablePreviewSizeWidget_('在平铺模式下已禁用');//Disabled in tile mode
       validSizes = ['original'];
     } else {
       this.enablePreviewSizeWidget_();

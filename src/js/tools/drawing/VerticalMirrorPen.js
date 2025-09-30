@@ -5,12 +5,12 @@
     this.superclass.constructor.call(this);
 
     this.toolId = 'tool-vertical-mirror-pen';
-    this.helpText = 'Vertical Mirror pen';
+    this.helpText = '垂直镜像画笔工具'; //Vertical Mirror pen
     this.shortcut = pskl.service.keyboard.Shortcuts.TOOL.MIRROR_PEN;
 
     this.tooltipDescriptors = [
-      {key : 'ctrl', description : 'Use horizontal axis'},
-      {key : 'shift', description : 'Use horizontal and vertical axis'}
+      {key : 'ctrl', description : '使用水平镜像'}, //Use horizontal axis
+      {key : 'shift', description : '同时使用垂直和水平镜像'} //Use horizontal and vertical axis
     ];
   };
 

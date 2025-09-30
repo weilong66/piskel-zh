@@ -7,12 +7,12 @@
 
   ns.ColorSwap = function() {
     this.toolId = 'tool-colorswap';
-    this.helpText = 'Paint all pixels of the same color';
+    this.helpText = '填充所有相同颜色的像素'; //Paint all pixels of the same color
     this.shortcut = pskl.service.keyboard.Shortcuts.TOOL.COLORSWAP;
 
     this.tooltipDescriptors = [
-      {key : 'ctrl', description : 'Apply to all layers'},
-      {key : 'shift', description : 'Apply to all frames'}
+      {key : 'ctrl', description : '应用于所有图层'}, //Apply to all layers
+      {key : 'shift', description : '应用于所有帧'} //Apply to all frames
     ];
   };
 

@@ -75,9 +75,9 @@
         'Select crop anchor:'
       ].join('');
     } else if (isBigger) {
-      anchorInfo.innerHTML = 'Select resize anchor:';
+      anchorInfo.innerHTML = '选择缩放锚点:';
     } else {
-      anchorInfo.innerHTML = 'Select position anchor:';
+      anchorInfo.innerHTML = '选择位置锚点:';
     }
   };
 

@@ -10,7 +10,7 @@
     ns.AbstractDragSelect.call(this);
 
     this.toolId = 'tool-lasso-select';
-    this.helpText = 'Lasso selection';
+    this.helpText = '套索工具'; //Lasso selection
     this.shortcut = pskl.service.keyboard.Shortcuts.TOOL.LASSO_SELECT;
   };
 

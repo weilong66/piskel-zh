@@ -33,14 +33,14 @@
     var isCurrentColorsPalette = paletteId == Constants.CURRENT_COLORS_PALETTE_ID;
     if (paletteId && !isCurrentColorsPalette) {
       importFileButton.style.display = 'none';
-      this.setTitle('Edit Palette');
+      this.setTitle('编辑调色板');
 
       var paletteObject = this.paletteService.getPaletteById(paletteId);
       palette = pskl.model.Palette.fromObject(paletteObject);
     } else {
       downloadButton.style.display = 'none';
       deleteButton.style.display = 'none';
-      this.setTitle('Create Palette');
+      this.setTitle('创建调色板');
 
       var uuid = pskl.utils.Uuid.generate();
       if (isCurrentColorsPalette) {
@@ -91,7 +91,7 @@
   };
 
   ns.CreatePaletteController.prototype.deletePalette_ = function () {
-    if (window.confirm('Are you sure you want to delete palette ' + this.palette.name)) {
+    if (window.confirm('您确定要删除调色板 \"' + this.palette.name + '\"吗？')) {
       this.paletteService.deletePaletteById(this.palette.id);
       pskl.UserSettings.set(pskl.UserSettings.SELECTED_PALETTE, Constants.CURRENT_COLORS_PALETTE_ID);
       this.closeDialog();
@@ -119,7 +119,7 @@
   };
 
   ns.CreatePaletteController.prototype.displayErrorMessage_ = function (message) {
-    message = 'Could not import palette : ' + message;
+    message = '无法导入调色板 : ' + message;
     $.publish(Events.SHOW_NOTIFICATION, [{
       'content' : message
     }]);

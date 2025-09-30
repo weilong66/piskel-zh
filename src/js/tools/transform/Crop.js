@@ -3,11 +3,13 @@
 
   ns.Crop = function () {
     this.toolId = 'tool-crop';
-    this.helpText = 'Crop the sprite';
+    this.helpText = '裁剪精灵'; //Crop the sprite
     this.tooltipDescriptors = [
       {
-        description : 'Crop to fit the content or the selection. ' +
-                      'Applies to all frames and layers!'
+        /* Crop to fit the content or the selection.
+        Applies to all frames and layers! */
+        description : '自动裁剪以适应内容或选区。' +
+                      '注意：此操作会应用于所有帧和图层！'
       }
     ];
   };

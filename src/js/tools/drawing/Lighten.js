@@ -12,12 +12,12 @@
     this.superclass.constructor.call(this);
 
     this.toolId = 'tool-lighten';
-    this.helpText = 'Lighten';
+    this.helpText = '减淡工具';//Lighten
     this.shortcut = pskl.service.keyboard.Shortcuts.TOOL.LIGHTEN;
 
     this.tooltipDescriptors = [
-      {key : 'ctrl', description : 'Darken'},
-      {key : 'shift', description : 'Apply only once per pixel'}
+      {key : 'ctrl', description : '加深'}, //Darken
+      {key : 'shift', description : '每个像素仅应用一次'} //Apply only once per pixel
     ];
   };
 

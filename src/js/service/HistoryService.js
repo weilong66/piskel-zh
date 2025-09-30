@@ -119,7 +119,7 @@
 
         var snapshotIndex = this.getPreviousSnapshotIndex_(index);
         if (snapshotIndex < 0) {
-          throw 'Could not find previous SNAPSHOT saved in history stateQueue';
+          throw '无法在历史状态队列中找到之前保存的快照';//Could not find previous SNAPSHOT saved in history stateQueue
         }
         var serializedPiskel = this.getSnapshotFromState_(snapshotIndex);
         var onPiskelLoadedCb = this.onPiskelLoaded_.bind(this, index, snapshotIndex);
