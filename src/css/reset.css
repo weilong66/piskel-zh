@@ -48,5 +48,5 @@ input[type="range"] {
 }
 
 a, a:visited {
-  color: var(--highlight-color);
+  color: var(#000);
 }
