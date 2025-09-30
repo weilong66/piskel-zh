@@ -107,7 +107,7 @@
   };
 
   ns.ImportController.prototype.onRestorePreviousSessionClick_ = function () {
-    if (window.confirm('This will erase your current workspace. Continue ?')) {
+    if (window.confirm('此操作将清除当前工作区。确定继续？')) {
       pskl.app.backupService.load();
       $.publish(Events.CLOSE_SETTINGS_DRAWER);
     }

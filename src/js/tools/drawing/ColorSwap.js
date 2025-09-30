@@ -7,7 +7,7 @@
 
   ns.ColorSwap = function() {
     this.toolId = 'tool-colorswap';
-    this.helpText = '填充所有相同颜色的像素'; //Paint all pixels of the same color
+    this.helpText = '魔术桶(填充相同颜色的所有像素)'; //Paint all pixels of the same color
     this.shortcut = pskl.service.keyboard.Shortcuts.TOOL.COLORSWAP;
 
     this.tooltipDescriptors = [

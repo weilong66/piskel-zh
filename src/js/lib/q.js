@@ -729,7 +729,7 @@ function Promise(descriptor, fallback, inspect) {
     if (fallback === void 0) {
         fallback = function (op) {
             return reject(new Error(
-                "Promise does not support operation: " + op
+                "Promise 不支持操作: " + op
             ));
         };
     }

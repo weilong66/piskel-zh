@@ -34,7 +34,7 @@
   };
 
   ns.CheatsheetController.prototype.onRestoreDefaultsClick_ = function () {
-    if (window.confirm('Replace all custom shortcuts by the default Piskel shortcuts ?')) {
+    if (window.confirm('是否确定将所有自定义快捷键恢复为Piskel默认快捷键？')) {
       pskl.app.shortcutService.restoreDefaultShortcuts();
     }
   };
@@ -110,8 +110,8 @@
   ns.CheatsheetController.prototype.toDescriptor_ = function (shortcut, iconClassProvider) {
     var iconClass = typeof iconClassProvider == 'function' ? iconClassProvider(shortcut) : '';
     return {
-      'shortcut' : shortcut,
-      'iconClass' : iconClass
+      'shortcut': shortcut,
+      'iconClass': iconClass
     };
   };
 
@@ -137,16 +137,16 @@
       shortcutClasses.push('cheatsheet-shortcut-editable');
     }
 
-    var title = shortcut.isEditable() ? 'Click to edit the key' : 'Shortcut cannot be remapped';
+    var title = shortcut.isEditable() ? '点击以更改快捷键' : '此快捷键无法更改';
 
     var markup = pskl.utils.Template.replace(shortcutTemplate, {
-      id : shortcut.getId(),
-      title : title,
-      icon : descriptor.iconClass,
-      description : description,
+      id: shortcut.getId(),
+      title: title,
+      icon: descriptor.iconClass,
+      description: description,
       // Avoid sanitization
-      '!key!' : this.formatKey_(shortcut.getDisplayKey()),
-      className : shortcutClasses.join(' ')
+      '!key!': this.formatKey_(shortcut.getDisplayKey()),
+      className: shortcutClasses.join(' ')
     });
 
     return markup;
@@ -169,11 +169,17 @@
   };
 
   ns.CheatsheetController.prototype.getHelptextTitle_ = function () {
-    var helpItems = [
+    /* var helpItems = [
       'Click on a shortcut to change the key.',
       'When the shortcut blinks, press the key on your keyboard to assign it.',
       'White shortcuts can not be edited.',
       'Click on \'Restore default shortcuts\' to erase all custom shortcuts.'
+    ]; */
+    var helpItems = [
+      '点击快捷键以更改按键。',
+      '当快捷键闪烁时，按下您键盘上的按键以进行分配。',
+      '白色的快捷键无法更改。',
+      '点击“恢复默认快捷键”以清除所有自定义快捷键。'
     ];
 
     var helptextTitle = helpItems.reduce(function (p, n) {

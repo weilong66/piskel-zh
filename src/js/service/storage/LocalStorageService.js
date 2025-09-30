@@ -3,7 +3,8 @@
 
   ns.LocalStorageService = function (piskelController) {
     if (piskelController === undefined) {
-      throw 'Bad LocalStorageService initialization: <undefined piskelController>';
+      // throw 'Bad LocalStorageService initialization: <undefined piskelController>';
+      throw '本地存储服务初始化失败：<undefined piskelController>';
     }
     this.piskelController = piskelController;
   };
@@ -16,9 +17,9 @@
 
     var serialized = pskl.utils.serialization.Serializer.serialize(piskel);
     if (pskl.app.localStorageService.getPiskel(name)) {
-      var confirmOverwrite = window.confirm('There is already a piskel saved as ' + name + '. Overwrite ?');
+      var confirmOverwrite = window.confirm('已存在名为 ' + name + ' 的Piskel作品。 确定覆盖 ?');
       if (!confirmOverwrite) {
-        return Q.reject('Cancelled by user, "' + name + '" already exists');
+        return Q.reject('操作取消, "' + name + '" 已存在');
       }
     }
 

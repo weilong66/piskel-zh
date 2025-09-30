@@ -47,13 +47,17 @@ Piskel 支持以下浏览器：
 
 提供离线版本。更多详情请参见[专门的 Wiki 页面](https://github.com/piskelapp/piskel/wiki/Desktop-applications)。
 
+## 帮助
+- [开发部署](./wiki/zh/development-environment.md)
+
 ## 如何参与贡献？
 
 我们始终欢迎帮助！
 
 * **问题反馈**：在使用应用时发现了问题，或希望请求新功能？请[提交一个 issue](https://github.com/piskelapp/piskel/issues)。
 * **开发贡献**：请查看[ Wiki 页面](https://github.com/piskelapp/piskel/wiki)以设置开发环境。
-## License
+
+## 许可
 
 Copyright 2017 Julian Descottes
 

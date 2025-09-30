@@ -96,7 +96,7 @@
     var isForbiddenKey = ns.Shortcuts.FORBIDDEN_KEYS.indexOf(key) != -1;
     if (isForbiddenKey) {
       $.publish(Events.SHOW_NOTIFICATION, [{
-        'content': 'Key cannot be remapped (' + keyAsString + ')',
+        'content': '无法映射按键 (' + keyAsString + ')',
         'hideDelay' : 5000
       }]);
     } else {
@@ -110,7 +110,7 @@
     this.getShortcuts().forEach(function (s) {
       if (s.removeKeys([key])) {
         $.publish(Events.SHOW_NOTIFICATION, [{
-          'content': 'Shortcut key removed for ' + s.getId(),
+          'content': '\"' + s.getDescription() + '\"快捷键因为冲突已被移除',
           'hideDelay' : 5000
         }]);
       }
