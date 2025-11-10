@@ -48,10 +48,10 @@
     // and we were not displaying a warning before.
     if (shouldDisplayWarning && !isWarningDisplayed) {
       $.publish(Events.SHOW_NOTIFICATION, [{
-        'content': 'Performance problem detected, ' +
+        'content': '检测到性能问题, ' +
                    '<a href="#" style="color:red;"' +
                        'onclick="pskl.controller.UserWarningController.showPerformanceInfoDialog()">' +
-                      'learn more?</a>',
+                      '了解更多?</a>',
         'hideDelay' : 5000
       }]);
     }
